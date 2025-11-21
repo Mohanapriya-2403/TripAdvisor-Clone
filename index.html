@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripAdvisor Clone</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <header id="site-header">
+        <div class="header-logo">
+            <h1>TripAdvisor</h1>
+        </div>
+        
+        <div class="header-search-container">
+            <input type="text" placeholder="Search destinations, hotels, things to do..." class="header-search-input">
+            <button class="header-search-btn">🔍</button>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#hotels" class="active">🏨 Hotels</a></li>
+                <li><a href="#flights">✈️ Flights</a></li>
+                <li><a href="#restaurants">🍽️ Restaurants</a></li>
+                <li><a href="#more">...</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="search-section" class="main-search container">
+            <h2>Find Your Next Adventure</h2>
+            <div class="search-input-group">
+                <input type="text" placeholder="City, destination, or attraction" class="big-search-input">
+                <button class="search-button">Search</button>
+            </div>
+            
+            <div class="search-filters">
+                <label>Price Range:</label>
+                <select>
+                    <option selected>All</option>
+                    <option>$</option>
+                    <option>$$</option>
+                    <option>$$$</option>
+                </select>
+                
+                <label>Rating:</label>
+                <select>
+                    <option selected>Any</option>
+                    <option>5 Stars</option>
+                    <option>4+ Stars</option>
+                    <option>3+ Stars</option>
+                </select>
+            </div>
+        </section>
+        
+        <section id="hero-banner" class="container">
+            <div class="hero-content">
+                <h3>Discover hidden gems near you.</h3>
+                <p>Plan your weekend getaway with personalized recommendations.</p>
+                <a href="#" class="hero-cta-button">See Local Deals</a>
+            </div>
+        </section>
+
+        <section id="featured-destinations" class="content-section container">
+            <h3>⭐ Featured Destinations</h3>
+            <div class="listing-card-wrapper">
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/paris.jpeg" alt="Paris, France">
+                    </div>
+                    <div class="card-details">
+                        <h4>Paris, France</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(5,100 Reviews)</span>
+                        </div>
+                        <p class="card-description">The City of Lights, famous for art, fashion, gastronomy, and culture.</p>
+                        <p class="card-price">Avg. $250/night</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/bali.jpeg" alt="Bali, Indonesia">
+                    </div>
+                    <div class="card-details">
+                        <h4>Bali, Indonesia</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(3,450 Reviews)</span>
+                        </div>
+                        <p class="card-description">Volcanic mountains, iconic rice paddies, beaches, and coral reefs.</p>
+                        <p class="card-price">Avg. $120/night</p>
+                    </div>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/grand.jpeg" alt="Grand Canyon, USA">
+                    </div>
+                    <div class="card-details">
+                        <h4>Grand Canyon, USA</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(4,800 Reviews)</span>
+                        </div>
+                        <p class="card-description">A breathtaking natural wonder, famous for its layered bands of red rock.</p>
+                        <p class="card-price">Activities from $50</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/tokyo.jpg" alt="Tokyo, Japan">
+                    </div>
+                    <div class="card-details">
+                        <h4>Tokyo, Japan</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(4,120 Reviews)</span>
+                        </div>
+                        <p class="card-description">A dense, modern metropolis known for its cutting-edge technology and history.</p>
+                        <p class="card-price">Avg. $190/night</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/london.jpg" alt="London, UK">
+                    </div>
+                    <div class="card-details">
+                        <h4>London, UK</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(3,950 Reviews)</span>
+                        </div>
+                        <p class="card-description">Historic capital with iconic landmarks, world-class museums, and diverse neighborhoods.</p>
+                        <p class="card-price">Avg. $220/night</p>
+                    </div>
+                </article>
+
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/brazil.jpg" alt="Rio de Janeiro, Brazil">
+                    </div>
+                    <div class="card-details">
+                        <h4>Rio de Janeiro, Brazil</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(2,880 Reviews)</span>
+                        </div>
+                        <p class="card-description">Stunning beaches, vibrant culture, and the iconic Christ the Redeemer statue.</p>
+                        <p class="card-price">Avg. $140/night</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="things-to-do" class="content-section container">
+            <h3>🎨 Top Things To Do</h3>
+            <div class="listing-card-wrapper">
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/city.jpg" alt="Guided city tour">
+                    </div>
+                    <div class="card-details">
+                        <h4>Historical Walking Tour</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(980 Reviews)</span>
+                        </div>
+                        <p class="card-description">Explore the city's hidden past with a knowledgeable local guide.</p>
+                        <p class="card-price">From $25/person</p>
+                    </div>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/cooking.jpg" alt="Local cooking class">
+                    </div>
+                    <div class="card-details">
+                        <h4>Local Cuisine Cooking Class</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(550 Reviews)</span>
+                        </div>
+                        <p class="card-description">Learn to prepare traditional dishes in a fun, hands-on environment.</p>
+                        <p class="card-price">From $75/person</p>
+                    </div>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/museum.jpg" alt="Museum ticket">
+                    </div>
+                    <div class="card-details">
+                        <h4>Skip-the-Line Museum Pass</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(2,100 Reviews)</span>
+                        </div>
+                        <p class="card-description">Instant access to the city's top five art and history museums.</p>
+                        <p class="card-price">From $45/pass</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        
+        <section id="popular-hotels" class="content-section container">
+            <h3>🏨 Popular Hotels Near You</h3>
+            <div class="listing-card-wrapper">
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/hotel.jpg" alt="Luxury Hotel">
+                    </div>
+                    <div class="card-details">
+                        <h4>The Coastal Retreat</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(850 Reviews)</span>
+                        </div>
+                        <p class="card-description">5-star resort with private beach access and infinity pool.</p>
+                        <p class="card-price">From $350/night</p>
+                    </div>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/central.jpg" alt="Boutique Hotel">
+                    </div>
+                    <div class="card-details">
+                        <h4>Boutique Inn Central</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(1,120 Reviews)</span>
+                        </div>
+                        <p class="card-description">Charming, centrally located stay with exceptional service.</p>
+                        <p class="card-price">From $180/night</p>
+                    </div>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="card-image-container">
+                        <img src="images/city.jpg" alt="Budget Inn">
+                    </div>
+                    <div class="card-details">
+                        <h4>City Center Budget Stay</h4>
+                        <div class="card-rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span class="review-count">(2,500 Reviews)</span>
+                        </div>
+                        <p class="card-description">Clean, affordable rooms within walking distance of attractions.</p>
+                        <p class="card-price">From $85/night</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="ad-banner" class="container">
+            <div class="ad-content">
+                <h4>✈️ Never Miss a Deal!</h4>
+                <p>Sign up for our newsletter to receive the best travel tips and exclusive discounts.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="site-footer">
+        <div class="footer-grid container">
+            <div class="footer-col">
+                <h5>About TripAdvisor</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Flights</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Things to Do</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Help & Support</h5>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Trust & Safety</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-logo-col">
+                 <h1 class="footer-logo">TripAdvisor</h1>
+                 <p class="social-links">
+                     <a href="https://www.facebook.com/">FaceBook</a> | <a href="https://www.linkedin.com/in/mohanapriya-s-b25502268/">LinkedIn</a> | <a href="https://www.instagram.com/__.mohanapriya.__/">Instagram</a>
+                 </p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy;MohanaPriya</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+#site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo h1 {
+    color: #00AA6C; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-search-container {
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.header-search-input {
+    border: none;
+    padding: 8px 15px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+.header-search-btn {
+    background-color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.header-search-btn:hover {
+    background-color: #eee;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex; 
+    gap: 25px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.header-nav a:hover, .header-nav a.active {
+    color: #00AA6C;
+}
+
+.header-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00AA6C;
+    border-radius: 2px;
+}
+
+#search-section {
+    background-color: #fff;
+    padding: 40px 5%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#search-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-input-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.big-search-input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #00AA6C;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #00AA6C;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #008855;
+}
+
+.search-filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.search-filters label {
+    font-weight: bold;
+}
+
+.search-filters select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.content-section {
+    padding: 20px 5%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.content-section h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.listing-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+}
+
+.listing-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.card-details {
+    padding: 15px;
+}
+
+.card-details h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00AA6C;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.card-rating .stars {
+    color: gold;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.review-count {
+    color: #777;
+}
+
+.card-description {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    /* Truncate long descriptions */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.card-price {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+#site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#site-footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+    #site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5%;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+
+    .header-search-container {
+        width: 100%; 
+        order: 3; 
+        margin: 10px 0;
+    }
+
+    .header-nav {
+        width: 100%;
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .header-nav ul {
+        justify-content: space-between; 
+        gap: 10px;
+    }
+
+    .search-filters {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+
+}
